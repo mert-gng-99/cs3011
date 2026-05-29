@@ -1,0 +1,6 @@
+# tooling artifacts — never publish
+*.db
+*.rvf
+*.rvf.lock
+*.lock
+.DS_Store
