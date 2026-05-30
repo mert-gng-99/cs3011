@@ -359,7 +359,55 @@ tr:hover td{background:rgba(255,255,255,.03)}
 .asy-ar{opacity:0;animation:asyFadeIn .8s ease 1.1s forwards}
 @media (prefers-reduced-motion:reduce){.asy-ac{animation:none;stroke-dashoffset:0}.asy-ar{animation:none;opacity:1}}
 
+/* === Tema degistir butonu (base / koyu tema) === */
+.theme-btn{width:38px;height:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:0;border-radius:10px;border:1px solid var(--bd);background:var(--s2);color:var(--t2);cursor:pointer;transition:color .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease),transform .25s var(--ease)}
+.theme-btn:hover{color:var(--ac2);border-color:var(--ac);background:var(--acg);transform:translateY(-1px)}
+.theme-btn:active{transform:scale(.94)}
+.theme-btn:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.theme-btn svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none}
+.theme-btn .ic-moon{display:none}
+html[data-theme="light"] .theme-btn .ic-sun{display:none}
+html[data-theme="light"] .theme-btn .ic-moon{display:block}
+body,.topbar,.tabs,td,th{transition:background-color .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+
+/* ===================== ACIK TEMA (LIGHT THEME) ===================== */
+html[data-theme="light"]{--bg:#F4F5F8;--s1:rgba(17,20,32,.025);--s2:rgba(17,20,32,.045);--s3:rgba(17,20,32,.07);--s4:rgba(17,20,32,.10);--bd:rgba(17,20,32,.12);--t:#15171C;--t2:#454B57;--t3:#697084;--ac:#7C3AED;--ac2:#6D28D9;--acg:rgba(124,58,237,.10);--g:#047857;--gg:rgba(4,120,87,.10);--r:#DC2626;--rg:rgba(220,38,38,.09);--y:#B45309;--yg:rgba(180,83,9,.10);--c:#0E7490;--cg:rgba(14,116,144,.10);--o:#C2410C;--p:#A21CAF;--pg:rgba(162,28,175,.09);--glass:rgba(255,255,255,.74);--glass-bd:rgba(17,20,32,.08);--glow-ac:rgba(124,58,237,.16);--glow-g:rgba(4,120,87,.14);--glow-r:rgba(220,38,38,.12)}
+html[data-theme="light"] body{background:var(--bg)}
+html[data-theme="light"] body::before{background:radial-gradient(circle at 30% 20%,rgba(124,58,237,.05) 0%,transparent 45%),radial-gradient(circle at 70% 80%,rgba(4,120,87,.045) 0%,transparent 45%),radial-gradient(circle at 50% 50%,rgba(14,116,144,.035) 0%,transparent 40%)}
+html[data-theme="light"] .topbar{background:rgba(255,255,255,.82)}
+html[data-theme="light"] .tabs{background:rgba(255,255,255,.80)}
+html[data-theme="light"] .topbar .prog{background:rgba(17,20,32,.08)}
+html[data-theme="light"] h1.title{background:linear-gradient(135deg,#1E1B4B 0%,#6D28D9 52%,#0E7490 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+html[data-theme="light"] code{background:rgba(17,20,32,.06);border-color:rgba(17,20,32,.08);color:#0E7490}
+html[data-theme="light"] ::-webkit-scrollbar-thumb{background:rgba(17,20,32,.20)}
+html[data-theme="light"] ::-webkit-scrollbar-thumb:hover{background:rgba(17,20,32,.32)}
+html[data-theme="light"] th{background:rgba(17,20,32,.045)}
+html[data-theme="light"] td{border-top-color:rgba(17,20,32,.07)}
+html[data-theme="light"] tr:hover td{background:rgba(17,20,32,.03)}
+html[data-theme="light"] .qopt{background:rgba(17,20,32,.03);border-color:rgba(17,20,32,.10)}
+html[data-theme="light"] .qopt-l{background:rgba(17,20,32,.06)}
+html[data-theme="light"] .btn-s{background:rgba(17,20,32,.05);border-color:rgba(17,20,32,.10);color:var(--t2)}
+html[data-theme="light"] .btn-s:hover{background:rgba(17,20,32,.09);color:var(--t)}
+html[data-theme="light"] .fb input{background:rgba(17,20,32,.05);border-color:rgba(17,20,32,.12);color:#0E7490}
+html[data-theme="light"] .fc-b{background:rgba(124,58,237,.07);border-color:rgba(124,58,237,.22);color:var(--ac2)}
+html[data-theme="light"] .divider{background:linear-gradient(90deg,transparent,rgba(17,20,32,.12),transparent)}
+html[data-theme="light"] .asy-acard{background:rgba(17,20,32,.03)}
+html[data-theme="light"] .asy-verdict{background:rgba(17,20,32,.03)}
+html[data-theme="light"] .mcm-cell{background:rgba(17,20,32,.04);border-color:rgba(17,20,32,.10);color:#0E7490}
+html[data-theme="light"] .mcm-cell.diag{background:rgba(4,120,87,.12);color:var(--g)}
+html[data-theme="light"] .mcm-cell.highlight{background:rgba(124,58,237,.14);color:var(--ac2)}
+html[data-theme="light"] .box{box-shadow:0 1px 2px rgba(17,20,32,.04),0 6px 20px rgba(17,20,32,.06)}
+/* Koyu kalan paneller (kod / monospace / hesaplama gorselleri) -- parlak token scope */
+html[data-theme="light"] .code,html[data-theme="light"] .step-box,html[data-theme="light"] .tree-container,html[data-theme="light"] #asyDemoSvg,html[data-theme="light"] #mcmTable,html[data-theme="light"] #asTimeline{--t:#EDEDEF;--t2:#8A8F98;--t3:#6B7280;--ac:#7C3AED;--ac2:#A78BFA;--g:#34D399;--r:#F87171;--y:#FBBF24;--c:#67E8F9;--o:#FB923C;--p:#F0ABFC}
+html[data-theme="light"] .code{background:#0d0f15;border-color:rgba(255,255,255,.08);color:#EDEDEF;box-shadow:0 4px 18px rgba(17,20,32,.10)}
+html[data-theme="light"] .step-box{background:#0d0f15;border-color:rgba(255,255,255,.06)}
+html[data-theme="light"] .tree-container{background:#0d0f15;border-color:rgba(255,255,255,.06)}
+html[data-theme="light"] #asyDemoSvg{background:#0d0f15;border-color:rgba(255,255,255,.06)}
+html[data-theme="light"] #mcmTable,html[data-theme="light"] #asTimeline{background:#0d0f15;border-radius:10px;padding:10px}
+html[data-theme="light"] .asy-fig svg{background:#0d0f15;border-radius:10px;padding:8px 6px}
+
 </style>
+<script>(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
 </head>
 <body>
 
@@ -368,6 +416,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
   <div class="prog"><div class="prog-fill" id="progBar"></div></div>
   <span class="prog-txt" id="progTxt">0%</span>
   <span class="score-box"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--y)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span id="score">0</span></span>
+  <button class="theme-btn" id="themeBtn" type="button" onclick="toggleTheme()" aria-label="Acik ve koyu tema arasinda gecis yap" title="Tema degistir"><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
 </div>
 
 <div class="tabs" id="tabBar"></div>
@@ -593,6 +642,7 @@ A₂ <strong>4 kat hızlı</strong>, hem de yavaş makinede! <br>
 <p>İki <strong>sıralı</strong> dizi verilmiş: [a₁,…,aₙ] ve [b₁,…,bₘ]. Bunları tek bir sıralı diziye birleştir.<br><br>
 <strong>Algoritma:</strong> İki diziye birer "parmak" koy. Hangi parmaktaki sayı küçükse onu al, output'a ekle, parmağı ilerlet. Bir dizi bitince diğerinin kalanını yapıştır.<br><br>
 <strong>Maliyet:</strong> Her sayıya en fazla 1 kez bakılır → <span class="gr">Θ(n+m) (linear)</span>.</p></div>
+<div class='box ex'><div class='box-t'>Merge Adimi — Somut Iz (slayt sayfa 44)</div><p>Iki sirali diziyi birlestir: [1,5,7] ve [2,3,6]. Her adimda iki parmagin gosterdigi kucuk sayiyi output'a al:<br>&nbsp;&nbsp;[1] → [1,2] → [1,2,3] → [1,2,3,5] → [1,2,3,5,6] → [1,2,3,5,6,7]<br><br>Toplam n+m sayidan her biri output'a tam <strong>bir kez</strong> tasinir → <span class='gr'>Θ(n) lineer zaman</span>. Bu lineer merge, Merge Sort'un combine adiminin neden C(n)=Θ(n) oldugunun tam sebebidir.</p></div>
 
 <div class="box form"><div class="box-t">Merge Sort'un D&C Yapısı (slayt sayfa 45)</div>
 <p><strong>1. Divide:</strong> Diziyi tam ortadan ikiye böl. Sadece middle index hesabı → <strong>D(n) = Θ(1)</strong><br>
@@ -957,6 +1007,7 @@ Yani toplamda <span class="cy">log₂(16) + 1 = 5 seviye</span>. Her seviyede 2<
 <p><code>n = O(n²)</code> yazabiliriz — bu "n, O(n²) set'inin bir elemanı" demek.<br>
 <code>2n² + 7n + 2 = 2n² + O(n)</code> demek "<em>bir</em> g ∈ O(n) için 2n² + g(n)" demek.<br>
 Yani Asymptotic notation'larda = işareti aslında "∈" (set membership) — buna <strong>"funny equality"</strong> denir.</p></div>
+<div class='box warn'><div class='box-t'>Tek Yonlu Esitligin Tuzagi (slayt sayfa 64)</div><p>Asimptotik notasyonda '=' tek yonlu (∈ gibi) oldugundan, bazi <strong>iliskisel (relational) ifadeler</strong> aslinda <strong>anlamsiz / her zaman dogru</strong> hale gelir. Slaytin ornegi: '<span class='yw'>T(n) ≤ O(n²)</span>' demek '<em>bir</em> f(n) ∈ O(n²) icin T(n) ≤ f(n)' demektir. Burada '∃ bir f' kuantoru kritik: O(n²) kumesi sifir fonksiyonundan (g(n)=0 ∈ O(n²)) cok buyuk fonksiyonlara kadar her buyukluge sahiptir, dolayisiyla T(n)'i ustten asan bir f neredeyse her zaman bulunabilir. Sonuc:<br>&nbsp;&nbsp;<span class='cy'>'T(n) ≤ O(n²)' herhangi bir running time icin dogrudur</span> — yani neredeyse hicbir bilgi tasimaz (slaytin deyimiyle 'meaningless').<br><br><strong>Dikkat — esitlikle karistirma:</strong> Bu, 'T(n) = O(n²)' (yani T(n) ∈ O(n²)) ifadesinden farklidir. '=' biçimi gercek bir ust sinirdir ve her T(n) icin dogru <em>degildir</em> (orn. T(n)=2ⁿ icin T(n) = O(n²) yanlistir). Anlamsiz olan, '≤ O(...)' seklindeki iliskisel ifadedir.<br><br><strong>Sinav notu:</strong> Bir algoritma icin 'O(n²)' demek onun gercekten n² gibi davrandigini KANITLAMAZ; sadece n²'yi (sabit carpan disinda) gecmedigini soyler, sinir tight olmayabilir. Tam (sıkı) karakterizasyon icin Θ gerekir.</p></div>
 
 <div class="box form"><div class="box-t">Big-Ω: Ω(g(n)) — Lower Bound (slayt sayfa 70)</div>
 <p><strong>Ω(g(n)) = { f(n) : ∃ c &gt; 0, n₀ &gt; 0 öyle ki ∀ n ≥ n₀, 0 ≤ c·g(n) ≤ f(n) }</strong><br><br>
@@ -1457,6 +1508,7 @@ Hepsi <span class="gr">Θ(n)</span> — asymptotic class değişmiyor.</p></div>
 &nbsp;&nbsp;S(m) = 2·S(m/2) + m<br>
 <strong>Adım 4.</strong> Bu tanıdık (Merge Sort recurrence!) → S(m) = Θ(m lg m).<br>
 <strong>Adım 5.</strong> Geri çevir: T(n) = S(lg n) = Θ(lg n · lg lg n). <span class="gr">✓</span></p></div>
+<div class='box ex'><div class='box-t'>Örnek (SLAYTTAKİ BİREBİR HALİ): T(n) = 4T(√n) + lg n → Θ(lg<sup>2</sup> n)</div><p><span class='rd'>DİKKAT:</span> Slayt 02 sayfa 31–32'deki örnek katsayısı <strong>4</strong>'tür (2 değil). √n alarak küçültme tanıdık olmayan bir form; tanıdık forma çevirelim.<br><br><strong>Adım 1.</strong> m = lg n koy → n = 2<sup>m</sup>, dolayısıyla √n = 2<sup>m/2</sup>.<br><strong>Adım 2.</strong> Recurrence'i yeniden yaz:<br>&nbsp;&nbsp;T(2<sup>m</sup>) = 4·T(2<sup>m/2</sup>) + m<br><strong>Adım 3.</strong> S(m) := T(2<sup>m</sup>) tanımla. O zaman S(m/2) = T(2<sup>m/2</sup>):<br>&nbsp;&nbsp;<span class='cy'>S(m) = 4S(m/2) + m</span><br><strong>Adım 4.</strong> Bu tam olarak T(n) = 4T(n/2) + n formunda → Master Case 1 (a=4, b=2, m<sup>log<sub>2</sub>4</sup> = m<sup>2</sup>, f(m)=m = O(m<sup>2−ε</sup>)) → <strong>S(m) = Θ(m<sup>2</sup>)</strong>.<br><strong>Adım 5.</strong> Geri çevir (m = lg n): <span class='gr'>T(n) = S(lg n) = Θ((lg n)<sup>2</sup>) = Θ(lg<sup>2</sup> n)</span> ✓</p></div>
 
 <h3>Method 3: Iteration / Repeated Substitution (slayt sayfa 33-35)</h3>
 <div class="box form"><div class="box-t">Fikir</div>
@@ -1474,6 +1526,7 @@ i=2: T(n) = 16·[4T(n/8) + n/4] + 2n + n = 64·T(n/8) + 4n + 2n + n<br><br>
 &nbsp;&nbsp;T(n) = 4<sup>lg n</sup>·T(1) + n·(2<sup>lg n</sup> − 1)<br>
 &nbsp;&nbsp;= n²·T(1) + n·(n−1) &nbsp;&nbsp; <span class="cy">[← a<sup>lg b</sup> = b<sup>lg a</sup> kimliği ile 4<sup>lg n</sup> = n<sup>lg 4</sup> = n²]</span><br>
 &nbsp;&nbsp;= <span class="gr">Θ(n²)</span></p></div>
+<div class='box tip'><div class='box-t'>Slaytın açılımda işaretlediği üç büyüme ailesi (sayfa 34)</div><p>Iteration açılırken (i=3'te T(n) = n + 2n + 4n + 64·T(n/8)) slayt üç ayrı büyüme 'ailesi'ni 'grows as' diye işaretler:<br>&nbsp;&nbsp;• <span class='cy'>Recursive (leaf) katsayı</span> her seviyede a=4 ile çarpılır → <strong>4<sup>i</sup></strong> gibi büyür (i. açılımda T(n/2<sup>i</sup>) önündeki katsayı; i=3'te 64 = 4<sup>3</sup>).<br>&nbsp;&nbsp;• <span class='cy'>Tek tek eklenen iş terimleri</span> (n, 2n, 4n, …) → <strong>2<sup>i</sup></strong> gibi büyür (i. terim 2<sup>i</sup>·n).<br>&nbsp;&nbsp;• <span class='cy'>İş terimlerinin toplamı</span> n(1+2+…+2<sup>i</sup>) = n(2<sup>i+1</sup>−1) → <strong>2<sup>i+1</sup></strong> gibi büyür.<br><br><strong>Tabana iniş (ayrı not):</strong> T(n/2<sup>i</sup>) = T(1) olunca durur, yani <strong>i = lg n</strong>. Yerine konunca 4<sup>lg n</sup> = n<sup>2</sup> (leaf payı) ve n(2<sup>lg n</sup>−1) = n(n−1) (ara terimler) → <span class='gr'>Θ(n<sup>2</sup>)</span>.</p></div>
 
 <div class="box crit"><div class="box-t">Iteration'da En Kritik Kimlik</div>
 <p><code>a<sup>lg b</sup> = b<sup>lg a</sup></code><br>
@@ -1707,6 +1760,7 @@ f(n) = n = O(n^(2-1)). ε=1.<br>
 <li>f(n) ile n^(log_b a) arasinda <strong>polynomial gap yoksa</strong> (orn: f = n/lg n)</li>
 <li>Case 3'te <strong>regularity condition sağlanmıyorsa</strong></li>
 </ul>
+<div class='box crit'><div class='box-t'>İşli Non-Örnek: T(n) = 2T(n/2) + n/lg n → Master UYGULANAMAZ</div><p>a=2, b=2 → n<sup>log<sub>2</sub>2</sup> = n. Şimdi f(n) = n/lg n ile n'yi karşılaştır:<br>&nbsp;&nbsp;• Case 1 için f(n) = O(n<sup>1−ε</sup>) gereken bir <strong>ε>0</strong> bulmalıyız. Ama n/lg n, her ε>0 için n<sup>1−ε</sup>'den <span class='rd'>daha hızlı</span> büyür (oran n<sup>ε</sup>/lg n → ∞) → Case 1 yok.<br>&nbsp;&nbsp;• Case 3 için f(n) = Ω(n<sup>1+ε</sup>) gerek; n/lg n ise n'den bile <span class='rd'>yavaş</span> büyür → Case 3 yok.<br>&nbsp;&nbsp;• Klasik Case 2 için f(n) = Θ(n) gerek; n/lg n ≠ Θ(n) → klasik Case 2 da yok.<br>&nbsp;&nbsp;• Genelleştirilmiş Case 2 (f = Θ(n<sup>log_b a</sup>·lg<sup>k</sup>n)) bile kurtaramaz: n/lg n = n·lg<sup>−1</sup>n, yani k=−1 gerekir; ama Master Theorem'de <strong>k ≥ 0</strong> (negatif lg üssü kabul edilmez) → bu case de yok.<br><br><span class='cy'>f(n) = n/lg n ile n arasındaki fark sadece bir lg n çarpanı — yani polinomsal değil.</span> f, n<sup>log_b a</sup>'nın tam yanında (boşlukta) kaldığı ve aralarında <span class='yw'>polinomsal bir ε</span> bulunamadığı için <strong>hiçbir case uygulanamaz</strong>. (Karşılaştır: f = n lg n olsaydı k=1 ile genelleştirilmiş Case 2 doldururdu → Θ(n lg<sup>2</sup>n); ama lg n <em>bölende</em> olunca k negatif gerektiğinden o yol da kapanır.)</p></div>
 
 <h2>Master Theorem Proof Sketch (Slayt 02)</h2>
 <div class="box form"><div class="box-t">Recursion Tree Analizi</div>
@@ -1834,6 +1888,7 @@ Tüm operasyonlar <strong>O(h)</strong>. Duplicate key destek (multiset).</p>
     x = y
     y = y.p
   <span class="kw">return</span> y</div>
+<div class='box form'><div class='box-t'>Successor Sezgisi: Neden 'sag cocuk oldugum surece yukari'? (slayt 23-26)</div><p>Successor = inorder gezintide x'ten hemen SONRA ziyaret edilen node. Iki durum:</p><p><strong>Durum 1 - x'in sag cocugu VAR:</strong> Inorder'da x'ten sonra once sag alt agac gezilir; oradaki ilk ziyaret edilen node = <span class='gr'>BST_Minimum(xR)</span>. Successor budur.</p><p><strong>Durum 2 - x'in sag cocugu YOK:</strong> x ziyaret edildikten sonra yukari donmemiz gerekir. Hangi ataya?<br>&nbsp;&nbsp;- x, parent'inin <span class='gr'>SOL</span> cocuguysa: inorder'da parent, x'ten hemen SONRA gelir -> successor = parent. Durur.<br>&nbsp;&nbsp;- x, parent'inin <span class='rd'>SAG</span> cocuguysa: parent x'ten ONCE gezilmis demektir, o yuzden parent successor olamaz; bir ust ataya cikariz ve ayni soruyu tekrar sorariz.</p><p><strong>Sonuc (slayt 26):</strong> Successor(x) = x'in <strong>SOL alt agacinda bulundugu en yakin ata (closest ancestor)</strong> y. Pseudocode'daki 'while x == y.right: yukari cik' tam olarak bunu yapar: sag-cocuk zincirini atlayip ilk 'sol-cocuk oldugumuz' ataya ulasir. En kotu durumda kok'e kadar cikilir -> O(h). (Eger boyle bir ata yoksa x maximum'dur, successor = NIL.)</p></div>
 
 <div class="box tip"><div class="box-t">BST_Search Iterative (Daha hızlı pratikte)</div>
 <div class="code" style="margin:8px 0"><span class="fn">BST-Search-Iterative</span>(x, k):
@@ -1854,6 +1909,7 @@ Tüm operasyonlar <strong>O(h)</strong>. Duplicate key destek (multiset).</p>
 &nbsp;&nbsp;• Ağaç dengeli ise (h = lg n) → O(n lg n) — Merge Sort'la aynı!<br>
 &nbsp;&nbsp;• Ağaç dengesiz ise (h = n) → O(n²) — Insertion Sort kadar kötü.</p></div>
 
+<div class='box form'><div class='box-t'>h, Agac Boyutunun Iyi Olcusu mu? (slayt 44-46)</div><p>Tum BST operasyonlari O(h). Ama h, girdinin boyutu icin tek basina iyi bir olcu DEGIL: ayni h yukseklikte agacta 2^h - 1 node de olabilir (tam dengeli), sadece h node da (zincir). O yuzden h'yi node sayisi n cinsinden ifade etmek isteriz.</p><p><strong>Best case</strong> - complete binary tree: her non-leaf node'un tam 2 cocugu var ve tum leaf'ler ayni seviyede -> <span class='gr'>h = O(lg n)</span>.<br><strong>Worst case</strong> - her non-leaf node'un tam 1 cocugu var (linked-list gibi zincir) -> <span class='rd'>h = O(n)</span>.</p><p>Sonuc: BST operasyonlari best case O(lg n), worst case O(n). SortUsingBST: best O(n lg n), worst O(n^2). 'Keske agaci dengeli tutmanin bir yolu olsa...' -> bu motivasyon RBT'ye goturur.</p></div>
 <h3>BST Insert & Delete</h3>
 <div class="code"><span class="fn">Tree-Insert</span>(T, z):
   y = NIL, x = T.root
@@ -1886,6 +1942,15 @@ Tüm operasyonlar <strong>O(h)</strong>. Duplicate key destek (multiset).</p>
     <span class="fn">Transplant</span>(T, z, y)
     y.left = z.left
     y.left.p = y</div>
+<div class='box warn'><div class='box-t'>DIKKAT: Slaytin Delete Yontemi CLRS'ten FARKLI</div><p>Yukaridaki Tree-Delete (Transplant + successor) CLRS yontemi. <strong>Professorun slaytinda (sayfa 40-44) iki cocuklu node icin FARKLI bir yontem var</strong> ve sinavda bu beklenebilir:</p><p><strong>Slaytin yontemi (sol alt agacin MAX'i):</strong><br>1. Silinecek node x'in sol alt agacindaki en buyuk node'u bul: z = BST_Maximum(left[x]). (O(h))<br>2. key[x] = key[z] kopyala. (Bu adimda BST property korunur cunku z, x'ten kucuk tum sol-altagac degerlerinin en buyugu.)<br>3. Artik fazladan duran z node'unu sil. <strong>z'nin sag cocugu yoktur</strong> (cunku max idi) yani z ya leaf ya da tek-cocuklu -> onceki basit case'ler uygulanir. BST_Delete(T, z) recursive cagrilir.</p><div class='code'><span class='fn'>BST_Delete</span>(T, x):
+  <span class='kw'>if</span> left[x]==NIL <span class='kw'>and</span> right[x]==NIL:   <span class='cm'>// leaf</span>
+    BST_Delete_LeafNode(T, x)
+  <span class='kw'>elif</span> left[x]==NIL <span class='kw'>or</span> right[x]==NIL:  <span class='cm'>// tek cocuk</span>
+    BST_Delete_SingleChildNode(T, x)
+  <span class='kw'>else</span>:                                <span class='cm'>// iki cocuk</span>
+    z = <span class='fn'>BST_Maximum</span>(left[x])         <span class='cm'>// O(h)</span>
+    key[x] = key[z]                       <span class='cm'>// max degeri kopyala</span>
+    <span class='fn'>BST_Delete</span>(T, z)               <span class='cm'>// z leaf veya tek-cocuklu</span></div><p><strong>Neden z her zaman sag-cocuksuz?</strong> z, sol alt agacin maximum'u oldugu icin BST_Maximum sag-link'leri takip ederek buldu; demek ki z'nin sag cocugu yok. O yuzden z silmesi her zaman kolay case (leaf veya tek cocuk). Toplam maliyet: O(h).</p><p><strong>Iki yontem de dogru</strong> (biri sol-altagacin max'ini = predecessor'u, oteki sag-altagacin min'ini = successor'u tasir). Sinavda hangi yontem isteniyorsa onu yaz; slayt yontemi sol-MAX.</p></div>
 
 <div class="divider"></div>
 <h2>Red-Black Trees</h2>
@@ -1933,6 +1998,7 @@ Step: Yeni bir iç node eklemek bir NIL'i alıp iki yeni NIL ekler → leaf say�
 <span class="cm">//   a   y       x   c       </span>
 <span class="cm">//      / \\    / \\          </span>
 <span class="cm">//     b   c  a   b          </span></div>
+<div class='box tip'><div class='box-t'>Rotation'in 3 Onemli Ozelligi (slayt 70-73)</div><p><strong>1. BST property KORUNUR.</strong> Rotation bir edge etrafinda yapilir; parent cocuk olur, cocuk parent olur. Sira korundugu icin (a &lt; x &lt; b &lt; y &lt; c) agac hala gecerli bir BST'dir.</p><p><strong>2. Agacin yuksekligi DEGISEBILIR.</strong> Genelde amac da budur: dengesiz bir agaci rotation ile dengeleyip h'yi dusurmek (slayt 73-74'teki ornek: right-rotate sonrasi agac boyanabilir RBT haline gelir ve yuksekligi azalir). Slaytta yukseklik: dondurmeden once h(z)=max{h(a)+3, h(b)+3, h(c)+2}, dondukten sonra h(z)=max{h(a)+2, h(b)+3, h(c)+3}.</p><p><strong>3. SABIT zamanda (O(1)) calisir.</strong> Sadece <strong>3 pointer (edge)</strong> guncellenir; alt agaclar (a, b, c) oldugu gibi tasinir, icine girilmez. Bu yuzden RB-Insert/Delete'in O(lg n) kalmasini saglayan kritik yapi tasidir.</p></div>
 
 <div class="box pink"><div class="box-t">📝 Ödev 2 — Soru 2 (BST rotations)</div>
 <p><strong>Soru (verbatim):</strong> <em>Consider the following binary search tree:</em></p>
@@ -2023,6 +2089,7 @@ IH: #(x_L) ≥ 2^bh(x_L) - 1, #(x_R) ≥ 2^bh(x_R) - 1.<br>
 
 <strong>Sonuç:</strong> RBT'de h = O(lg n) → tüm dynamic set operasyonları O(lg n)!</p></div>
 
+<div class='box ex'><div class='box-t'>Neden Yeni Node RED? (slayt 67-68, 76-77)</div><p>Insert sirasinda yeni node'a renk secmeliyiz. Iki secenek:</p><p><strong>BLACK secersek:</strong> Yeni node'un bulundugu path'te bir fazla BLACK olur -> <span class='rd'>property 5 (her path'te ayni sayida black) HEMEN bozulur</span> ve bunu duzeltmek zor.</p><p><strong>RED secersek:</strong> Black sayisi degismez -> <span class='gr'>property 5 otomatik korunur</span>. Tek olasi sorun: yeni RED node'un parent'i da RED ise <strong>property 4 (red-red yasak)</strong> ihlali. Bu ihlal fixup ile (her an en fazla 1 red-red cift kalir; cift gerekirse koke dogru itilerek) duzeltilir.</p><p>Bu yuzden RB-Insert daima yeni node'u RED boyar; fixup'in tek isi olasi tek bir red-red ciftini cozmektir.</p><p><strong>Not (slayt 68):</strong> Delete de property bozabilir. Ornek: '4(B) / 2,6 / 1,3,5,7' agacindan 5 silinince bir path'te black sayisi degisir -> artik RBT degil; RB-Delete-Fixup gerekir.</p></div>
 <h3>RB-Insert Fixup - TAM Pseudocode</h3>
 <div class="code"><span class="fn">RB-Insert</span>(T, z):
   <span class="cm">// Normal BST insert yap</span>
@@ -2061,6 +2128,7 @@ IH: #(x_L) ≥ 2^bh(x_L) - 1, #(x_R) ≥ 2^bh(x_R) - 1.<br>
 
 <h3>Görsel RBT Insertion</h3>
 <div id="rbtInsertVis"></div>
+<div class='box ex'><div class='box-t'>Slaytin RB-Insert Ornegi (sayfa 88-91): insert 6</div><p>Baslangic agaci (renkler slayttaki gibi): kok 2(B), sol 1, sag 4; 4'un cocuklari 3 ve 7; 7'nin sol/sag cocuklari 5(R) ve 8(R).</p><p><strong>Adim 1 - BST insert:</strong> 6 > 2 sag, 6 > 4 sag, 6 &lt; 7 sol, 6 > 5 sag -> 6, 5'in sag cocugu olur, RED boyanir.</p><p><strong>Adim 2 - Case 1:</strong> x=6'nin parent'i 5 RED, uncle 8 RED, grandparent 7. -> 5 ve 8 BLACK, 7 RED yapilir. x yukari cikar: x = 7.</p><p><strong>Adim 3 - Case 3 (symmetric):</strong> Yeni x=7 RED, parent 4 RED, uncle (2'nin sol cocugu 1) BLACK. x=7, 4'un sag cocugu; 4, grandparent 2'nin sag cocugu -> <strong>line/RR durumu</strong>. LEFT_ROTATE(T, grandparent=2), sonra renk swap: parent 4 -> BLACK, eski grandparent 2 -> RED. Red-red tamamen cozulur, agac dengelenir.</p></div>
 
 <div class="box pink"><div class="box-t">📝 Ödev 2 — Soru 1 (RBT successive insertions)</div>
 <p><strong>Soru (verbatim):</strong> <em>Show the red-black trees that result after successively inserting the following keys into an initially empty red-black tree:<br>
@@ -2205,6 +2273,18 @@ Sınavda detayı sorulmaz. Sadece "O(lg n) ile RBT delete yapılır" demek yeter
 <div class="box ex"><div class="box-t">Örnek 1: Dynamic Order Statistics</div>
 <p>RBT'ye <strong>size</strong> field ekle → rank ve order-statistic operasyonlarını <strong>O(lg n)</strong>'de destekle.<br>
 Naive (size'sız) RBT_Rank: <span class="rd">O(n)</span> (CountNodes O(n) iş yapar).</p></div>
+<div class='box ex'><div class='box-t'>Augmentation'dan Önce: Naive RBT_Rank (Slayt s.6-11)</div><p>size alanı YOKKEN, x'in rank'ini bulmak: x'in sol subtree'sindeki node sayısı + 1, artı parent pointer'larla yukarı çıkarken x'in sağ subtree'sinde olduğu her atadaki sol subtree.</p><div class='code'><span class='fn'>RBT_Rank</span>(T, x):
+  rank = <span class='fn'>CountNodes</span>(left[x]) + <span class='nm'>1</span>
+  y = parent[x]; z = x
+  <span class='kw'>while</span> y ≠ NULL:
+    <span class='kw'>if</span> right[y] == z:        <span class='cm'>// x, y'nin sağ subtree'sinde</span>
+      rank = rank + <span class='fn'>CountNodes</span>(left[y]) + <span class='nm'>1</span>
+    z = y; y = parent[z]
+  <span class='kw'>return</span> rank
+
+<span class='fn'>CountNodes</span>(x):
+  <span class='kw'>if</span> x == RBT_Leaf: <span class='kw'>return</span> <span class='nm'>0</span>
+  <span class='kw'>return</span> <span class='nm'>1</span> + <span class='fn'>CountNodes</span>(left[x]) + <span class='fn'>CountNodes</span>(right[x])</div><p><strong>Analiz:</strong> Ana loop yukarı tırmandığı için O(h)=O(lg n) kez döner. AMA her iterasyondaki <code>CountNodes</code> çağrısı bir subtree'yi baştan sayar → worst case O(n). x maksimum key'e sahipse tüm node'lar sayılır → toplam <span class='rd'>O(n)</span>. En pahalı adım CountNodes; onu hızlandırırsak (size'ı saklarsak) rank O(lg n)'e iner. <strong>Augmentation'ın motivasyonu budur.</strong></p></div>
 
 <h2>Order-Statistic Trees (OS-Trees)</h2>
 <p>Her node x'te ek alan: <span class="cy">x.size</span> = x'in subtree'sindeki node sayısı (kendisi dahil).</p>
@@ -2235,12 +2315,20 @@ Sol.left.size = 3 → r = 4. i=5 > 4 → sağ subtree'ye git, OS-Select(right, 1
     y = y.p
   <span class="kw">return</span> r</div>
 
+<h3>Insert Sırasında size Bakımı (AugmentedBST_Insert)</h3><div class='box form'><div class='box-t'>Insert-Path Loop (Slayt s.22-24)</div><p>Rotation'dan <strong>önce</strong>: yeni node eklenince, root'tan yeni node'a giden yoldaki <strong>her</strong> node'un subtree'sine 1 eleman eklenmiş olur. O yüzden bu yoldaki tüm size alanları +1 yapılır.</p><div class='code'><span class='fn'>AugmentedBST_Insert</span>(T, x):
+  <span class='fn'>BST_Insert</span>(T, x)         <span class='cm'>// normal BST insert</span>
+  x.size = <span class='nm'>1</span>               <span class='cm'>// x bir yaprak, altında internal node yok</span>
+  tmp = parent[x]
+  <span class='kw'>while</span> tmp ≠ NULL:        <span class='cm'>// root'a kadar yukarı yürü</span>
+    tmp.size = tmp.size + <span class='nm'>1</span>
+    tmp = parent[tmp]</div><p>Worst case root'a kadar bir yol → <span class='gr'>O(h) = O(lg n)</span>. Sonra FixColoring çalışır; rotation olursa orada da sadece 2 node O(1)'de düzeltilir (aşağıya bak). Toplam insert yine O(lg n).</p></div>
 <h3>Rotation'da size Güncelleme</h3>
 <div class="box form"><div class="box-t">Left-Rotate sonrasi size update</div>
 <p>Left-Rotate(T, x) yapıldığında (x → y dönüşümu):<br>
 <code>y.size = x.size</code> (y, x'in yerini aldi)<br>
 <code>x.size = x.left.size + x.right.size + 1</code> (x'in yeni çocuklarina göre)<br><br>
 Sadece <strong>2 node</strong> güncellenir! O(1) ek maliyet.</p></div>
+<div class='box tip'><div class='box-t'>Rotation Formülleri — α/β/γ Notasyonu (Slayt s.27-28, 49-51)</div><p>z'nin çocuğu y, y'nin çocuğu x; alt subtree'ler α, β, γ. <strong>Kilit gözlem (ispatta istenir):</strong> z'nin altındaki node kümesi ve α, β, γ alt-ağaçları rotation'da DEĞİŞMEZ → bu node'ların ve subtree köklerinin size/max alanları aynı kalır. Sadece x ve y düzeltilir.</p><p><strong>RIGHT_ROTATE(T, y)</strong> (y, z'nin sol çocuğu; x, y'nin sol çocuğu. Dönüş sonrası: x üstte, y x'in sağ çocuğu):<br><code>size[y] = size(β) + size(γ) + 1</code><br><code>size[x] = size(α) + size(β) + size(γ) + 2</code></p><p><strong>LEFT_ROTATE(T, x)</strong> (dönüş sonrası: x altta, y üstte):<br><code>size[x] = size(α) + size(β) + 1</code><br><code>size[y] = size(α) + size(β) + size(γ) + 2</code></p><p>Interval ağacında aynı yapı max ile. <strong>ÖNEMLİ:</strong> önce alttaki node'u, sonra üstteki node'u güncelle (üst, altın yeni max'ını kullanır).</p><p><strong>RIGHT_ROTATE max</strong> (alt = y, üst = x):<br><code>max[y] = max( max(root β), max(root γ), high[y] )</code><br><code>max[x] = max( max(root α), max[y], high[x] )</code></p><p><strong>LEFT_ROTATE max</strong> (alt = x, üst = y):<br><code>max[x] = max( max(root α), max(root β), high[x] )</code><br><code>max[y] = max( max(root γ), max[x], high[y] )</code></p><p>Her iki yönde de sabit sayıda atama → rotation başına <span class='gr'>O(1)</span> ek iş, insert/delete O(lg n) kalır.</p></div>
 
 <div class="divider"></div>
 
@@ -2266,6 +2354,14 @@ Yani biri digerinin bitişinden önce başlıyor.</p></div>
 <p><code>x.max = max(x.int.high, x.left.max, x.right.max)</code><br><br>
 Rotation sırasinda da sadece 2 node güncellenir (tıpki size gibi).<br>
 Insert/Delete O(lg n) kalir.</p></div>
+<h3>Insert Sırasında max Bakımı (IntervalBST_Insert)</h3><div class='box form'><div class='box-t'>Insert-Path max-Fix Loop (Slayt s.42)</div><p>Yeni interval eklenince, root'tan yeni node'a giden yoldaki node'ların max'ı yeni high'tan küçükse güncellenir:</p><div class='code'><span class='fn'>IntervalBST_Insert</span>(T, x):
+  <span class='fn'>BST_Insert</span>(T, x)            <span class='cm'>// low'u key olarak kullan</span>
+  x.max = x.high             <span class='cm'>// x'in altında internal node yok</span>
+  tmp = parent[x]
+  <span class='kw'>while</span> tmp ≠ NULL:
+    <span class='kw'>if</span> tmp.max &lt; x.high:
+      tmp.max = x.high
+    tmp = parent[tmp]</div><p>Yol en fazla O(lg n) node içerir, dolayısıyla bu düzeltme O(lg n) sürer.</p></div><div class='box ex'><div class='box-t'>Örnek: Insert [8,19] (Slayt s.43-45)</div><p>low=8 ile BST insert yolu: [17,19] (max=23) → [5,11] (max=18) → [15,18] (max=18) → [7,10] (max=10) → [8,19] sağ çocuk olarak eklenir.</p><p>high=19 ile yol boyunca max'lar yukarı düzeltilir: [7,10].max 10→19, [15,18].max 18→19, [5,11].max 18→19. Root [17,19].max ise zaten 23 olduğu için değişmez (23 > 19). Yani yalnızca high'tan küçük max'lar yukarı doğru güncellenir, daha büyük bir max'a rastlanınca da kalan üst node'lar zaten yeterince büyüktür.</p></div>
 
 <h3>4 Adımda Augmenting</h3>
 <div class="box ex"><div class="box-t">Genel Framework (CLRS Ch. 14)</div>
@@ -2390,11 +2486,13 @@ Slayt bu yüzden <em>"possibly"</em> inefficient diyor: bazı sorguları hızlan
 P(n) = 1 if n=1, else Σ_{k=1}^{n-1} P(k)·P(n-k)<br>
 P(n) = Ω(4ⁿ / n^(3/2)) — exponential. Pratiksiz.</p></div>
 
+<div class='box form'><div class='box-t'>Optimal Substructure — Cut-and-Paste İspatı (Slayt s.84-87)</div><p>Diyelim optimal parantezleme A1..n'i en üst seviyede k'da bölüyor: (A1..k)(Ak+1..n). <strong>İddia:</strong> A1..k için verilen parantezleme de A1..k'nın optimal çözümü olmak zorunda.</p><p><strong>İspat (cut-and-paste / çelişki):</strong> Eğer A1..k için daha ucuz bir parantezleme olsaydı, onu mevcut çözümdeki A1..k'nın yerine koyardık. Her iki durumda da A1..k aynı Ak+1..n ile çarpılıyor; tek fark A1..k'nın iç maliyeti. O zaman toplam maliyet düşerdi → ama A1..n çözümünün optimal olduğunu varsaymıştık. Çelişki. Aynısı Ak+1..n için de geçerli.</p><p><strong>Genel ilke:</strong> 'Bir probleme optimal çözüm, alt-problem örneklerine optimal çözümler içerir' → DP'nin uygulanabilmesinin birinci anahtar gözlemi. (İkinci anahtar gözlem: overlapping subproblems.)</p></div>
 <div class="box form"><div class="box-t">DP Recurrence (EZBERLE!)</div>
 <p>m[i, j] = A_{i..j} hesaplamak için min scalar mult sayısı.<br><br>
 <span class="cy">m[i, j] = 0                                                            if i = j<br>
 m[i, j] = min_{i ≤ k &lt; j} { m[i,k] + m[k+1,j] + p_{i-1}·p_k·p_j }    if i &lt; j</span></p></div>
 
+<div class='box tip'><div class='box-t'>Tablo Doldurma Bağımlılığı — Neden Diagonal-by-Diagonal? (Slayt s.94-97)</div><p>m[i,j]'yi hesaplamak için recurrence m[i,k] ve m[k+1,j]'ye bakar:</p><ul><li><strong>m[i,k]</strong> (k &lt; j): m[i,j] ile <em>aynı satırda, solunda</em> bir hücre.</li><li><strong>m[k+1,j]</strong> (k+1 > i): m[i,j] ile <em>aynı sütunda, altında</em> bir hücre.</li></ul><p>Yani bir hücre, kendi satırının solundaki ve kendi sütununun altındaki hücreler hazır olunca hesaplanabilir. Başta sadece diagonal (m[i,i]=0) bilinir. Önce uzunluk-2 zincirler (1. üst-diagonal), sonra uzunluk-3, ... en son m[1,n]. Bu yüzden d (zincir uzunluğu / diagonal) üzerinden dış döngü kurulur.</p><p><strong>Maliyet:</strong> ~n²/2 hücre, her hücre ≤ n split denemesi → <span class='gr'>Θ(n³)</span>.</p></div>
 <h3>MCM Tam Pseudocode (Slayt 05)</h3>
 <div class="code"><span class="fn">FindMinimumScalarMultiplications</span>(p) {
   <span class="cm">// p = [p_0, p_1, ..., p_n]; A_i is p_{i-1} × p_i</span>
@@ -2463,12 +2561,22 @@ m[1,4] = min(<br>
 ) = <span class="gr">168</span> (s[1,4]=2)<br><br>
 
 <strong>Optimal parantezleme:</strong> Use s table — s[1,4]=2 → ((A₁A₂)(A₃A₄))<br>
+<div class='box form'><div class='box-t'>s-Tablosundan Parantezlemeyi Kurma (Slayt s.104-107)</div><p>s[i,j] = m[i,j]'yi minimize eden bölme noktası k. Slayda göre parantezleme sadece üç+ matris için anlamlı olduğundan <strong>i+1 &lt; j</strong> olan hücreler doldurulması anlamlı olan hücrelerdir. Yine de parantezlemeyi kurarken özyineleme her i&lt;j için s[i,j]'yi okur ve i==j olana kadar iner:</p><div class='code'><span class='fn'>PrintParens</span>(s, i, j):
+  <span class='kw'>if</span> i == j:
+    print 'A' + i              <span class='cm'>// tek matris, taban durum</span>
+  <span class='kw'>else</span>:
+    k = s[i,j]
+    print '('
+    <span class='fn'>PrintParens</span>(s, i, k)       <span class='cm'>// sol alt-zincir A_i..A_k</span>
+    <span class='fn'>PrintParens</span>(s, k+<span class='nm'>1</span>, j)     <span class='cm'>// sağ alt-zincir A_(k+1)..A_j</span>
+    print ')'</div><p><strong>Örnek (worked example, s[1,4]=2):</strong> s[1,4]=2 → en üst bölme (A1..2)(A3..4). Sol için s[1,2]=1 (uzunluk-2 → A1, A2'ye iner, etrafına paranter ekler), sağ için s[3,4]=3 (A3, A4'e iner) → sonuç <strong>((A1 A2)(A3 A4))</strong>. Uzunluk-2 zincirler de özyinelemeye girdiği için iç parantezler oluşur.</p></div>
 <strong>Total mult:</strong> 168 scalar multiplications.</p></div>
 
 <h3>Görsel Animasyon — MCM Tablosu (diagonal-by-diagonal fill)</h3>
 <div id="mcmVis"></div>
 
 <div class="divider"></div>
+<div class='box tip'><div class='box-t'>Delete ve Genel Sonuç (Slayt s.30)</div><p>Slayt delete detayına girmez ama açıkça belirtir: delete sırasında da <strong>sabit miktarda ek iş</strong> ile size alanları korunabilir → delete de <span class='gr'>O(lg n)</span> kalır. Aynı mantık <em>analojik olarak</em> interval tree'deki max alanı için de geçerlidir (max da node + iki çocuktan hesaplandığı için rotation'da O(1) korunur; slayt interval delete'i ayrıca ele almaz ama IntervalRBT_Insert için O(lg n) bakımı gösterir, s.51-52).</p><p><strong>Genel sonuç (s.30):</strong> Augmented RBT'de tüm temel dynamic-set operasyonları (Search, Min, Max, Insert, Delete, Predecessor, Successor) <em>artı</em> yeni operasyonlar (rank, order-statistics / interval-search) hepsi <span class='gr'>O(lg n)</span>. Search/Min/Max/Predecessor/Successor ağacı değiştirmediği için ek bakım gerektirmez ve zaten RBT olduğu için O(lg n)'dir; Insert/Delete ise sabit ek bakım ile O(lg n)'de kalır.</p></div>
 <h2>📝 Recitation Soruları — Augmenting</h2>
 
 <div class="box pink"><div class="box-t">Recit 6 — Soru 3 (depth augmentation neden RBT insert'i bozar)</div>
@@ -2505,6 +2613,7 @@ LCS length 4: ⟨3, 6, 3, 5⟩ veya ⟨3, 8, 5, 3⟩.</p></div>
 <div class="box crit"><div class="box-t">Brute Force - Bad</div>
 <p>n boyutlu A'nın 2ⁿ subsequence'i var → her birini B'de aramak → exponential. Pratiksiz.</p></div>
 
+<div class='box form'><div class='box-t'>Length ve Prefix Notasyonu (Slayt 06 s.8)</div><p><strong>Length:</strong> Bir sequence'in uzunlugu eleman sayisidir. A = ⟨5,3,6,3,8,5,3⟩ → length 7.</p><p><strong>Prefix:</strong> A = ⟨a1,...,an⟩ icin <span class='cy'>A_i</span>, A'nin uzunlugu i olan prefix'idir (0 &lt;= i &lt;= n). Ornek A = ⟨3,6,3,8,5⟩:<br>A_0 = ⟨ ⟩, A_1 = ⟨3⟩, A_2 = ⟨3,6⟩, A_3 = ⟨3,6,3⟩, A_5 = A.</p><p>LCS recurrence ve optimal substructure bu A_i / B_j prefix'leri uzerine kuruludur: c[i,j] = LCS(A_i, B_j) uzunlugu, ve <strong>c[n,m]</strong> aradigimiz cevaptir cunku A_n = A, B_m = B.</p></div>
 <h3>Optimal Substructure (Slayt 06)</h3>
 <div class="box form"><div class="box-t">3 Case Argument</div>
 <p>Aₙ = ⟨a₁,...,aₙ⟩, Bₘ = ⟨b₁,...,bₘ⟩, C = ⟨c₁,...,c_k⟩ LCS.<br><br>
@@ -2521,6 +2630,19 @@ LCS length 4: ⟨3, 6, 3, 5⟩ veya ⟨3, 8, 5, 3⟩.</p></div>
 c[i, j] = c[i-1, j-1] + 1                         if i,j&gt;0 AND a_i = b_j<br>
 c[i, j] = max(c[i-1, j], c[i, j-1])               if i,j&gt;0 AND a_i ≠ b_j</span></p></div>
 
+<div class='box ex'><div class='box-t'>RecursiveLCS + Overlapping Subproblems (Slayt 06 s.19-20)</div><p>Recurrence'i doğrudan recursive algoritmaya çevirebiliriz:</p><div class='code'>RecursiveLCS(A, B):              // A,B boyutlari n,m
+  if (n==0 or m==0) return ⟨ ⟩    // bos sequence
+  if (a_n == b_m)                 // son elemanlar ayni
+    return RecursiveLCS(A_{n-1}, B_{m-1}) . a_n   // append a_n
+  LCS1 = RecursiveLCS(A,   B_{m-1})
+  LCS2 = RecursiveLCS(A_{n-1}, B)
+  return (|LCS1| > |LCS2|) ? LCS1 : LCS2          // uzun olani dondur</div><p><span class='rd'>Problem:</span> Bu blind recursion ayni subproblem'i defalarca cozer. Ornegin <span class='hl'>RecursiveLCS(A_{n-1}, B_{m-1})</span> hem RecursiveLCS(A, B_{m-1}) hem de RecursiveLCS(A_{n-1}, B) dallarinin altinda tekrar belirir:</p><div class='code'>                RecursiveLCS(A_n, B_m)
+               /                      \
+  RecursiveLCS(A_n, B_{m-1})   RecursiveLCS(A_{n-1}, B_m)
+         |                              |
+        ...   RecursiveLCS(A_{n-1},B_{m-1})  ← TEKRAR
+              RecursiveLCS(A_{n-1},B_{m-1})  ← TEKRAR</div><p><strong>Sonuc:</strong> Matrix-chain'deki gibi <span class='cy'>book-keeping</span> (tablo) ile her subproblem'i bir kez cozeriz. DP'ye gecmemizin sebebi tam olarak budur.</p></div>
+
 <h3>Runtime + Space</h3>
 <div class="box tip"><div class="box-t">Complexity</div>
 <p><strong>Time:</strong> n·m cell, her biri O(1) → <span class="gr">Θ(nm)</span>.<br>
@@ -2535,6 +2657,7 @@ Trace için tam tablo lazım.</p></div>
 - i=0 veya j=0 → dur.<br><br>
 LCS'i ters sırada elde edersin → ters çevir.</p></div>
 
+<div class='box tip'><div class='box-t'>Tabloyu Elle Doldurma Sirasi (Slayt 06 s.22-24)</div><p><strong>1. Init:</strong> Ilk satir (i=0) ve ilk sutun (j=0) hepsi <span class='cy'>0</span> (uzunluk) / <span class='cy'>&lt; ></span> (string).</p><p><strong>2. Bagimlilik:</strong> i,j > 0 icin c[i,j] sadece su 3 komsuya ve a_i, b_j'ye bagli:<br>• <span class='hl'>c[i-1, j-1]</span> (capraz, a_i = b_j ise +1)<br>• <span class='hl'>c[i-1, j]</span> (yukari)<br>• <span class='hl'>c[i, j-1]</span> (sol)</p><p><strong>3. Sira:</strong> Bu bagimliliklar yukari/sola dogru oldugu icin tabloyu <span class='gr'>satir satir, soldan saga</span> doldurmak yeterlidir (slayttaki mavi/yesil dalga sirasi da gecerli bir alternatif); en son sag-alt hucre <strong>c[n,m]</strong> cevaptir.</p></div>
 <h3>Interaktif LCS Tablosu</h3>
 <div id="lcsVis"></div>
 
@@ -2544,6 +2667,7 @@ LCS'i ters sırada elde edersin → ters çevir.</p></div>
 <h3>Activity Selection Problem</h3>
 <p><strong>Problem:</strong> n activity, her birinin start(s) ve finish(f) zamani var. Çakışmayan maximum sayıda activity seç.</p>
 <p><strong>Greedy choice:</strong> Her zaman <span class="gr">en erken biten</span> activity'yi seç!</p>
+<div class='box form'><div class='box-t'>Compatibility (Formal) + Calisma Zamani (Slayt 06 s.57, s.62)</div><p>Her aktivite c_i icin start s_i ve finish f_i, ve <span class='cy'>s_i &lt; f_i</span>. Aktivite yari-acik aralikta yapilir: <span class='cy'>[s_i, f_i)</span> (baslangic dahil, bitis haric).</p><p><strong>Iki aktivite c_i ve c_j compatible (cakismaz) iff:</strong><br><span class='gr'>s_i >= f_j</span>  VEYA  <span class='gr'>s_j >= f_i</span>  (biri, digeri bittikten sonra baslar).</p><p>Activity selection: birbiriyle compatible olan ve |A| maximize edilen bir A altkumesini bul.</p><p><strong>Calisma zamani:</strong> Her aktiviteyi tam bir kez ele aliriz ve her birinde sabit is yapariz → <span class='gr'>Theta(n)</span>. Aktiviteler finish time'a gore sirali degilse, basta bir sort gerekir; karsilastirmali sort ile <strong>O(n lg n)</strong>, dolayisiyla sort dahil toplam maliyet <strong>O(n lg n)</strong>.</p></div>
 
 <div class="code"><span class="fn">GreedyActivitySelector</span>(s, f):    <span class="cm">// f'ye göre sıralı</span>
   n = s.length
@@ -2732,6 +2856,7 @@ Yoksa decoding ambiguous olur: "0000" → "abab" mı "bababa" mı?</p></div>
 - <strong>Sol edge: 0, Sağ edge: 1.</strong><br>
 - Code = root'tan leaf'e edge label'larının dizilimi.<br>
 - <strong>Prefix-free</strong> garantili (leaf'ler farklı path'lerin sonunda).</p></div>
+<div class='box tip'><div class='box-t'>Lemma: Tek-cocuklu Ic Dugum Optimal Degildir (Slayt 06 s.91)</div><p>Bir prefix code'un agacinda <span class='rd'>tek cocuklu (single-child)</span> bir internal node varsa, o kod <strong>optimal olamaz</strong>.</p><p><strong>Neden:</strong> Tek-cocuklu dugumu kaldirip yerine onun tek cocugunu koyabiliriz. Bu, o altagacin tum yapraklarinin kodlarindan birer bit eksiltir &rarr; cost <span class='gr'>kesin azalir</span>. Yani iyilestirilebilen kod optimal degildir.</p><p><strong>Sonuc:</strong> Optimal prefix code agaci her zaman <span class='cy'>full binary tree</span>'dir (her internal node'un tam 2 cocugu var). Huffman'in her adimda en kucuk 2 dugumu birlestirmesi de bu yapiyi garanti eder.</p></div>
 
 <h3>Cost Formula</h3>
 <div class="box form"><div class="box-t">Total bits</div>
@@ -2739,6 +2864,7 @@ Yoksa decoding ambiguous olur: "0000" → "abab" mı "bababa" mı?</p></div>
 <strong>Cost:</strong> <span class="cy">d_c = Σ_{s ∈ S} |d(s)| · f(s)</span><br>
 <strong>Prefix Code Problem:</strong> S ve f verildiğinde d_c'yi minimize eden prefix code'u bul.</p></div>
 
+<div class='box warn'><div class='box-t'>Full Binary Tree Yeterli Degil &rarr; Huffman Gerekir (Slayt 06 s.92)</div><p>Her internal node'un 2 cocugu olmasi (full binary tree) gerekli ama <span class='rd'>yeterli degil</span>. Ayni sembol kumesi icin hepsi full-binary-tree olan <strong>birden fazla</strong> prefix code agaci kurulabilir, ama bunlarin cost'lari (Sigma |d(s)|.f(s)) farkli olur.</p><p>Ornegin a:45 bir agacta derin (uzun kod), digerinde koke yakin (kisa kod) yerlestirilebilir; sik gecen sembol koke yakin olmali. <strong>Soru:</strong> Bu agaclar arasindan optimal cost verecek olani nasil garantili insa ederiz? <span class='gr'>Cevap: Huffman's algorithm.</span></p></div>
 <h3>Huffman's Algorithm (Greedy - Slayt 06)</h3>
 <div class="box ex"><div class="box-t">Algoritma</div>
 <p><strong>Bottom-up:</strong> Her iteration en küçük 2 frekansı birleştir.<br>
@@ -2766,6 +2892,13 @@ Adımlar:<br>
 1. n eleman insert → O(n lg n)<br>
 2. n-1 iteration, her biri 2 delete + 1 insert = O(lg n).<br>
 3. <span class="gr">Total: O(n lg n)</span></p></div>
+<div class='box ex'><div class='box-t'>Huffman2 — RBT ile O(n lg n) (Slayt 06 s.101-102)</div><div class='code'>Huffman2(S, f):
+1  insert all elements of S into empty RBT T   // key = f(s)
+2  while (T has two or more nodes):
+3     s1 = Min(T); RBTDelete(T, s1)             // min'i bul+sil
+4     s2 = Min(T); RBTDelete(T, s2)             // min'i bul+sil
+5     let s be new node, key(s) = key(s1)+key(s2)
+6     RBTInsert(T, s)</div><p><strong>Satir-satir timing:</strong><br>&bull; Line 1: n eleman insert, her biri O(lg n) &rarr; <span class='cy'>n . O(lg n)</span><br>&bull; while: <span class='cy'>n-1</span> kez doner<br>&bull; Line 3 &amp; 4: 2 x (Min + Delete) = O(lg n)<br>&bull; Line 5: sabit; Line 6: O(lg n)<br><strong>Toplam:</strong> <span class='gr'>O(n lg n)</span>.</p><p><span class='hl'>Onemli:</span> T <em>prefix code agacini</em> tutmaz; sadece henuz birlestirilmemis (bekleyen) node kumesini tutar &rarr; T'de her an en fazla n eleman vardir.</p></div>
 
 <div class="box ex"><div class="box-t">Worked Example: {a:45, b:13, c:12, d:16, e:9, f:5}</div>
 <p>Initial list (sorted): f:5, e:9, c:12, b:13, d:16, a:45<br>
@@ -2813,6 +2946,7 @@ d) Selecting the activity with the latest start time.</em></p>
 &nbsp;&nbsp;• i=1: <strong>minimum</strong><br>
 &nbsp;&nbsp;• i=n: <strong>maximum</strong><br>
 &nbsp;&nbsp;• i=⌊(n+1)/2⌋: <strong>median</strong></p></div>
+<div class='box tip'><div class='box-t'>Median: lower ve upper (slayt 34)</div><p>n <strong>tek</strong> ise tek bir median vardır: i = (n+1)/2.<br>n <strong>çift</strong> ise <em>iki</em> median tanımlanır:<br>&nbsp;&nbsp;• <span class='cy'>lower median</span>: i = ⌊(n+1)/2⌋<br>&nbsp;&nbsp;• <span class='cy'>upper median</span>: i = ⌈(n+1)/2⌉<br>Slayt bu yüzden 'median<strong>s</strong>' (çoğul) diyor. Selection algoritmaları her ikisini de O(n)'de bulabilir; genelde lower median (⌊(n+1)/2⌋) kullanılır.</p></div>
 
 <h2>2. Minimum / Maximum — Linear Time (slayt 03 sayfa 35)</h2>
 <div class="box form"><div class="box-t">Trivial Algoritma</div>
@@ -2884,6 +3018,7 @@ T(n) ≤ (2/n) Σ ck + O(n)<br>
 &nbsp;&nbsp;&nbsp;≤ cn - (something ≥ 0) ⟹ <span class="gr">T(n) = O(n)</span> expected ✓</p></div>
 
 <p><strong>Worst case: hala O(n²)</strong> ama olasılığı düşük.</p>
+<div class='box form'><div class='box-t'>Ön Gözlem: Sabit Oranlı Partition ⟹ Linear (slayt 49-50)</div><p>Median-of-medians algoritmasına geçmeden önce slaytların kurduğu kilit fikir: <strong>her recursion seviyesinde sabit bir oranda bölme</strong> garantileyebilirsek selection worst case linear olur.<br><br>Diyelim ki partition her zaman bir tarafa <span class='hl'>α·n</span>, diğer tarafa <span class='hl'>(1−α)·n</span> eleman koyuyor; burada <span class='cy'>1/2 ≤ α &lt; 1</span> (yani büyük parça orantılı, n−1 gibi keyfi büyüyemiyor). En kötü durumda büyük parçaya recurse ederiz:<br>  <span class='cy'>T(n) = max( T(α·n), T((1−α)·n) ) + O(n)</span></p></div><div class='box form'><div class='box-t'>Substitution İspatı</div><p><strong>Guess:</strong> T(n) = O(n), yani T(n) ≤ c·n göstereceğiz.<br><strong>Verify:</strong><br>  T(n) ≤ max( c·α·n , c·(1−α)·n ) + O(n)<br>  α ≥ 1/2 olduğu için büyük terim c·α·n → T(n) ≤ c·α·n + O(n)<br>  = c·n − ( (1−α)·c·n − O(n) )<br>c yeterince büyük seçilirse (1−α)·c·n terimi O(n)'i baskılar (çünkü α &lt; 1, yani 1−α > 0 sabit) → parantez ≥ 0 → <span class='gr'>T(n) ≤ c·n = O(n)</span>.</p></div><div class='box tip'><div class='box-t'>Neden Kritik?</div><p>Bu sonuç bir <strong>varsayım</strong> üzerine kurulu: 'her seviyede sabit oran garantilenebilirse'. Sıradan Partition bunu garanti edemez (worst case bir tarafa 0, diğerine n−1 → α=1 sınırı → T(n)=T(n−1)+O(n)=O(n²)). <strong>Median-of-medians'ın tüm amacı tam da bu sabit oranı (büyük parça ≤ 7n/10, yani α=7/10 &lt; 1) garanti etmektir.</strong> Yani aşağıdaki WCL_Select, bu ön teoremin hipotezini sağlamak için tasarlanmıştır.</p></div>
 
 <h3>WCL_Select - Worst Case Linear (Median of Medians)</h3>
 <div class="box form"><div class="box-t">Algorithm (Slayt 03)</div>
@@ -2905,6 +3040,7 @@ T(n) ≤ (2/n) Σ ck + O(n)<br>
   <span class="kw">return</span> <span class="fn">WCL_Select</span>(A, mid+<span class="nm">1</span>, last, i - mid_and_less);
 }</div>
 
+<div class='box crit'><div class='box-t'>İncelik: 3n/10 sadece ALT sınır — 7n/10 ÜST sınırı AYRI kanıtlanır (slayt 54-56)</div><p>m_m, n/5 medyanın medyanı olduğundan, <span class='gr'>medyanların yarısı (n/10 tanesi) m_m'den ≤'dir</span>. Bu n/10 medyanın her biri kendi 5'li grubunun medyanı; her grupta medyandan ≤ olan 2 eleman daha var. Yani her böyle grup en az 3 eleman katkı veriyor:<br>&nbsp;&nbsp;<span class='cy'>en az (n/10)·3 = 3n/10 eleman m_m'den ≤</span> → sol parça <strong>EN AZ</strong> 3n/10.<br><br><span class='rd'>DİKKAT:</span> Bu sadece bir <strong>ALT</strong> sınır! Sol parçanın <em>üst</em> sınırını henüz bilmiyoruz; worst case'de sol parça hâlâ n−1 eleman içerebilir. Yani 3n/10 tek başına recurrence için yetmez.</p></div><div class='box form'><div class='box-t'>Üst Sınır: Simetrik Argüman</div><p>Şimdi m_m'den <strong>≥</strong> olan n/10 medyanı düşün. Her böyle grupta medyandan ≥ olan 2 eleman daha var → <span class='cy'>en az 3n/10 eleman m_m'den ≥</span>.<br>Bu 3n/10 eleman sol parçada (≤ m_m olan kısımda) OLAMAZ. Toplam n eleman olduğundan:<br>&nbsp;&nbsp;sol parça ≤ n − 3n/10 = <span class='gr'>7n/10</span>.<br><br>İşte aradığımız <strong>ÜST</strong> sınır: partition'dan sonra hangi tarafa recurse edersek edelim, büyük parça en fazla 7n/10. Recurrence'taki T(7n/10) terimi tam buradan gelir.</p></div>
 <div class="box form"><div class="box-t">Recurrence İspatı (Slayt 03 Detaylı)</div>
 <p>m_m, n/5 medyanın medyanı. n/10 medyan m_m'den küçük. Her grup 5 element → her grup'ta median'a göre 2 daha küçük.<br>
 ⟹ <strong>en az 3n/10 element m_m'den küçük</strong> (left subarray ≥ 3n/10).<br>
@@ -2943,6 +3079,7 @@ Ama olasılıkları bulmak çoğu zaman zor. Üstelik <em>worst-case garantisi</
 
 <div class="box ex"><div class="box-t">Worst-of-Worst-Case Yaklaşımı (sayfa 6-7)</div>
 <p>Her operasyonun worst case'ini al, n ile çarp. Pratikte çok pesimist. Bunun yerine <strong>amortized analysis</strong>: <em>n operasyonun toplam maliyetini</em> hesapla, ortala. Hala worst-case garantisi.</p></div>
+<div class='box form'><div class='box-t'>Worst-of-Worst-Case — Formal Sınır (sayfa 6-7)</div><p>n adımın her biri op1,...,opk'dan biri olsun; maliyetleri op1:O(f1), ..., opk:O(fk). <strong>opm</strong> en pahalı operasyon olsun, yani her 1≤j≤k için f<sub>j</sub> = O(f<sub>m</sub>).</p><p>Üst sınır vermek için <em>her adımın en pahalı operasyonu (opm) çalıştırdığını</em> varsayabiliriz:</p><div class='code'>T(n) = O(n · f<sub>m</sub>)</div><p>Bu <strong>geçerli</strong> bir üst sınırdır ama genelde <span class='rd'>tight değildir</span> (worst-of-worst-case'i varsayarız; pratikte her adım aynı anda en pahalı olamaz). Amortized analiz tam bu noktada daha sıkı bir sınır bulmak için devreye girer.</p></div>
 
 <h3>Tipik Örnek: MultiPOP Stack (sayfa 11-16)</h3>
 <div class="code"><span class="cm">// Standard stack: PUSH, POP her biri O(1).</span>
@@ -2952,6 +3089,7 @@ Ama olasılıkları bulmak çoğu zaman zor. Üstelik <em>worst-case garantisi</
     k--;
   }
 }</div>
+<div class='box ex'><div class='box-t'>MultiPOP Maliyeti Neden O(min(k,|S|))? (sayfa 13-14)</div><p>while döngüsü iki koşulla durur: <strong>S boşaldığında</strong> veya <strong>k=0 olduğunda</strong>.</p><ul><li>Eğer <span class='cy'>k ≤ |S|</span>: k eleman pop edilir, döngü tam <strong>k</strong> kez döner (önce k biter).</li><li>Eğer <span class='cy'>k > |S|</span>: stack'te yalnızca |S| eleman var, döngü <strong>|S|</strong> kez döner (önce stack boşalır).</li></ul><p>İki durumu birleştirince iterasyon sayısı = <strong>min(k, |S|)</strong>, yani maliyet <span class='gr'>O(min(k,|S|))</span>.</p><p><span class='rd'>Naïve worst case:</span> n−1 PUSH ardından bu n−1 elemanı boşaltan tek bir MultiPOP → o tek çağrı O(n). Bu yüzden naïve analiz n çağrı × O(n) = O(n²) sanır.</p></div>
 <p>MultiPOP cost: O(min(k, |S|)). Worst case k = |S| = n → tek MultiPOP O(n).<br><br>
 <strong>Naïve analiz:</strong> n operasyonda her biri worst case O(n) → toplam O(n²). <span class="rd">Çok pesimist!</span><br>
 <strong>Gerçek:</strong> Bir eleman max 1 kez push, max 1 kez pop edilebilir → toplam pop iteration ≤ toplam push ≤ n.<br>
@@ -2959,6 +3097,7 @@ Ama olasılıkları bulmak çoğu zaman zor. Üstelik <em>worst-case garantisi</
 
 <h2>8. Three Methods — Amortized Analysis (slayt sayfa 9)</h2>
 <p>Amortized analiz için 3 yöntem var: Aggregate, Accounting, Potential.</p>
+<div class='box form'><div class='box-t'>Üç Yöntem Arasındaki Temel Fark (sayfa 21)</div><ul><li><strong>Aggregate:</strong> tüm operasyonlara <span class='cy'>UNIFORM</span> amortized maliyet atar = T(n)/n. Operasyon tipi ne olursa olsun aynı ortalama maliyet kullanılır.</li><li><strong>Accounting &amp; Potential:</strong> farklı operasyon tiplerine <span class='cy'>FARKLI</span> amortized maliyetler atar (ör. PUSH=2, POP=0, MultiPOP=0). Daha esnek; tek bir operasyonun amortized maliyeti üzerinden de konuşabilirsin.</li></ul><p>Üçü de aynı sonucu verir (MultiPOP için her op O(1) amortized), ama yaklaşımları bu yönde ayrışır.</p></div>
 
 <h3>Method 1: Aggregate Method (sayfa 10-21)</h3>
 <div class="box form"><div class="box-t">Fikir</div>
@@ -2967,6 +3106,10 @@ Ama olasılıkları bulmak çoğu zaman zor. Üstelik <em>worst-case garantisi</
 <div class="box ex"><div class="box-t">MultiPOP Stack (Aggregate)</div>
 <p>MultiPOP'taki tüm while iterations'ın toplam sayısı ≤ toplam PUSH sayısı ≤ n. Bunlara ek olarak n adet PUSH/POP/MultiPOP "outer call" var. Toplam: O(n).<br>
 Amortized per op = O(n)/n = <span class="gr">O(1)</span>.</p></div>
+<div class='box tip'><div class='box-t'>Daha Önce Benzer Bir Analiz Yapmıştık: Counting Sort (sayfa 7-8)</div><p>Aggregate düşünce yeni değil. Counting Sort'un output üretme döngüsünü hatırla:</p><div class='code'>for (i=1; i&lt;=k; i++)        <span class='cm'>// aralıktaki her sayı</span>
+  for (j=1; j&lt;=times[i]; j++) { <span class='cm'>// o sayiyi cikti uret</span>
+    A[m]=i; m++;
+  }</div><p>Dış loop <span class='cy'>O(k)</span> kez döner. Ama iç loop her i için <strong>farklı sayıda</strong> döner (times[i] kadar) — bu tıpkı 'op1: O(f1), ..., opk: O(fk)' durumu.</p><p><span class='rd'>Naïve sınır:</span> her i için iç loop en fazla n kez döner varsayımıyla → O(nk). <span class='gr'>Daha iyi (aggregate) sınır:</span> iç loop TOPLAMDA en fazla n kez döner, çünkü Σ times[i] = n (toplam üretilen eleman sayısı girdinin boyutu). Dolayısıyla iki loop birlikte <strong>O(n+k)</strong>. Bu, tek tek operasyona değil toplam işe bakmanın — yani aggregate yöntemin — ilk örneğidir.</p></div>
 
 <h3>Method 2: Accounting Method (sayfa 22-26)</h3>
 <div class="box form"><div class="box-t">Fikir — "Vending Machine" Analojisi (sayfa 22-23)</div>
@@ -2980,6 +3123,7 @@ Amortized per op = O(n)/n = <span class="gr">O(1)</span>.</p></div>
 &nbsp;&nbsp;MultiPOP = 0 TL (her pop için kredi kullan)<br><br>
 <strong>Açıklama:</strong> PUSH'ta 2 TL ödüyorsun: 1 TL push'un kendisi için, 1 TL elemanın "üzerine yapıştırılıyor". O eleman ne zaman pop edilirse, ona yapıştırılan 1 TL ile pop bedava.<br><br>
 n operasyon → toplam max 2n TL → amortized <span class="gr">O(1)</span>.</p></div>
+<div class='box tip'><div class='box-t'>Accounting — Neden Kredi Asla Negatife Düşmez? (sayfa 24-26)</div><p>Anahtar gözlem: <strong>her eleman stack'ten tam olarak bir kez pop edilir</strong> (ister tek POP ister MultiPOP ile). PUSH sırasında o elemana 1 TL yapıştırdığımız için, pop edildiğinde maliyeti karşılayacak 1 TL her zaman hazırdır.</p><p>Dolayısıyla POP ve MultiPOP için ekstra ödeme gerekmez → amortized maliyetleri <strong>0</strong> alabiliriz ve <span class='gr'>bilgisayara asla borçlanmayız (kredi ≥ 0 invariant'ı korunur)</span>.</p><p><strong>Worst-case toplam:</strong> Artık en pahalı amortized operasyon PUSH (2 TL). n operasyonun hepsi PUSH olsa bile toplam ödeme en fazla <strong>2n TL</strong>. Ödeme zamanla orantılı olduğundan T(n)=O(2n)=<span class='gr'>O(n)</span>.</p></div>
 
 <h3>Method 3: Potential Method (sayfa 27-37)</h3>
 <div class="box form"><div class="box-t">Formal Tanım (sayfa 28)</div>
@@ -3103,6 +3247,14 @@ Her op O(1) amortized → n op toplam O(n) ✓ (sayfa 37).</p></div>
 // RENDER ENGINE
 // ============================================================
 let cur = 0, completed = new Set(), score = 0, answered = new Set();
+
+// ===== Tema (acik/koyu) gecisi =====
+function toggleTheme(){
+  var c=document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';
+  var n=c==='light'?'dark':'light';
+  document.documentElement.setAttribute('data-theme',n);
+  try{localStorage.setItem('theme',n);}catch(e){}
+}
 
 
 // ===== Asymptotic interaktif demo (eklendi) =====
@@ -3719,7 +3871,7 @@ function buildHuffmanVis(){
   let idx=0;
   el.innerHTML=`<div class="steps">
     <h3 style="margin:0 0 10px;font-size:14px">Huffman Tree: {a:45, b:13, c:12, d:16, e:9, f:5}</h3>
-    <div id="huBox" style="white-space:pre;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;min-height:200px;background:rgba(0,0,0,.3);padding:18px;border-radius:12px;color:var(--c);overflow-x:auto"></div>
+    <div id="huBox" style="white-space:pre;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;min-height:200px;background:#0d0f15;padding:18px;border-radius:12px;color:#67E8F9;overflow-x:auto"></div>
     <div id="huDesc" style="margin-top:10px;color:var(--y);font-weight:500;font-size:13px;min-height:30px"></div>
     <div class="step-ctrl">
       <button class="btn btn-s" onclick="huPrev()">← Geri</button>
